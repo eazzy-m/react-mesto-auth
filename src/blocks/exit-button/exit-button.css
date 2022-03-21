@@ -1,0 +1,28 @@
+.exit-button {
+    background-image: url('../../images/close.svg');
+    align-self: end;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(0,0,0,0);
+    padding: 0;
+    margin-bottom: 8px;
+    background-position: center;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.exit-button:focus {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 970px){
+    .exit-button {
+        background-image: url('../../images/CloseIconLittle.svg');
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 16px;
+    }
+}

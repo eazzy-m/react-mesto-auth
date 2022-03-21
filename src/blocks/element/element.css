@@ -1,0 +1,11 @@
+.element {
+    width: 282px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}

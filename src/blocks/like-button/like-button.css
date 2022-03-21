@@ -1,0 +1,19 @@
+.like-button {
+    background-image: url("../../images/Vector-like.svg");
+    background-color: rgba(255,255,255, 0);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    object-fit: fill;
+    object-position: right;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    width: 22px;
+    height: 19px;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.like-button:hover {
+    opacity: 0.5;
+}

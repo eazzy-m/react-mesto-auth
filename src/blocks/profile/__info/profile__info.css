@@ -1,0 +1,23 @@
+.profile__info {
+    grid-area: div;
+    left: 0;
+    display: grid;
+    column-gap: 18px;
+    row-gap: 16px;
+    grid-template-areas: 
+    "h1 button"
+    "p .";
+}
+
+@media screen and (max-width: 970px) {
+    .profile__info {
+        grid-template-areas: 
+        "h1 button"
+        "p .";
+        column-gap: 10px;
+        row-gap: 14px;
+        justify-content: center;
+        margin-top: 26px;
+        margin-bottom: 36px;
+}
+}

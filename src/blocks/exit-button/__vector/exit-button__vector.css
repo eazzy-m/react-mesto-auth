@@ -1,0 +1,15 @@
+.exit-button__vector {
+    width: 32px;
+    height: 32px;
+}
+
+.exit-button__vector:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 970px){
+    .exit-button__vector{
+        width: 20px;
+        height: 20px;
+    }
+}

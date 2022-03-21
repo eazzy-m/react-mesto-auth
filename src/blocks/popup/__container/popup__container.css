@@ -1,0 +1,14 @@
+.popup__container {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 970px) {
+    .popup__container {
+        width: 282px;
+    }
+}

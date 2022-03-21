@@ -1,0 +1,15 @@
+.form__title_confirm {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 31px;
+}
+
+
+@media screen and (max-width: 970px){
+    .form__title_confirm{
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 52px;
+    }
+}

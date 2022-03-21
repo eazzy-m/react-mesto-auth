@@ -1,0 +1,18 @@
+.form__container {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    padding: 34px 36px 37px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #FFF;
+    margin: 0;
+}
+
+@media screen and (max-width: 970px) {
+    .form__container {
+        width: 282px;
+        padding: 26px 22px 26px;
+    }
+}

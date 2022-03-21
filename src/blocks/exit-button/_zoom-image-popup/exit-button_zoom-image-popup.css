@@ -1,0 +1,16 @@
+.exit-button_zoom-image-popup {
+    position: relative;
+    padding: 0;
+    margin-right: -30px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 970px) {
+    .exit-button_zoom-image-popup {
+        position: relative;
+        padding: 0;
+        margin: 0 0 16px;
+        background-size: cover;
+    }
+}
