@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
 import Header from "./Header";
-import Footer from "./Footer";
 import Main from "./Main";
-import api from "../utils/api";
-import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
 import ImagePopup from "./ImagePopup";
+import Footer from "./Footer";
+import api from "../utils/api";
+import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
 function App() {
 

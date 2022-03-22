@@ -6,9 +6,7 @@ function Card({ card, onCardClick, onCardDelete, onCardLike }) {
     const user = useContext(CurrentUserContext);
 
     const isOwner = card.owner._id === user._id;
-    const [liked, setLiked] = useState(
-        card.likes.some(i => i._id === user._id) // Does the card have a like set by the current user?
-    );
+    const [liked, setLiked] = useState(card.likes.some(i => i._id === user._id)); // Does the card have a like set by the current user?
 
     function handleClick() {
         onCardClick(card);
