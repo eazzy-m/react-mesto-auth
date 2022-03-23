@@ -99,7 +99,9 @@ function App() {
       <>
           <CurrentUserContext.Provider value={currentUser}>
             <div className="page">
-              <Header/>
+              <Header
+                  userMail={"test@mail.uu"}
+              />
 
               <Main onEditAvatar={handleEditAvatarClick}
                     onEditProfile={handleEditProfileClick}
@@ -110,29 +112,29 @@ function App() {
                     cards={cards}
 
               />
-                <EditProfilePopup
-                    isOpen={isEditProfileOpen}
-                    onClose={closeAllPopups}
-                    onUpdateUserInfo={handleUpdateUserInfo}
-                />
+              {/*  <EditProfilePopup*/}
+              {/*      isOpen={isEditProfileOpen}*/}
+              {/*      onClose={closeAllPopups}*/}
+              {/*      onUpdateUserInfo={handleUpdateUserInfo}*/}
+              {/*  />*/}
 
-                <EditAvatarPopup
-                    isOpen={isEditAvatarOpen}
-                    onClose={closeAllPopups}
-                    onUpdateAvatar={handleUpdateAvatar}
-                />
+              {/*  <EditAvatarPopup*/}
+              {/*      isOpen={isEditAvatarOpen}*/}
+              {/*      onClose={closeAllPopups}*/}
+              {/*      onUpdateAvatar={handleUpdateAvatar}*/}
+              {/*  />*/}
 
-                <AddPlacePopup
-                    isOpen={isAddPlaceOpen}
-                    onClose={closeAllPopups}
-                    onAddPlace={handleAddPlace}
-                />
+              {/*  <AddPlacePopup*/}
+              {/*      isOpen={isAddPlaceOpen}*/}
+              {/*      onClose={closeAllPopups}*/}
+              {/*      onAddPlace={handleAddPlace}*/}
+              {/*  />*/}
 
-                <ImagePopup
-                    card={selectedCard}
-                    isOpen={isImageOpen}
-                    onClose={closeAllPopups}
-                />
+              {/*  <ImagePopup*/}
+              {/*      card={selectedCard}*/}
+              {/*      isOpen={isImageOpen}*/}
+              {/*      onClose={closeAllPopups}*/}
+              {/*  />*/}
 
               <Footer/>
 

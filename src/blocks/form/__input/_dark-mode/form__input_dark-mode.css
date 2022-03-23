@@ -1,0 +1,20 @@
+.form__input_dark-mode {
+    border-bottom: 2px solid #CCC;
+    color: #CCC;
+}
+
+.form__input_dark-mode::placeholder {
+    color: #CCC;
+}
+
+.form__input_dark-mode::-ms-input-placeholder {
+    color: #CCC;
+}
+
+.form__input_dark-mode::-moz-placeholder {
+    color: #CCC;
+}
+
+.form__input_dark-mode::-webkit-input-placeholder {
+    color: #CCC;
+}
