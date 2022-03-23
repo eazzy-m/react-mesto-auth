@@ -13,7 +13,7 @@ function Main({ onAddPlace, onCardDelete, onCardLike, cards, onCardClick, onEdit
 
     return (
         <main className="main">
-            <Register/>
+            <Login/>
             {/*<section className="profile">*/}
 
             {/*    <div className="profile__overlay">*/}

@@ -1,4 +1,5 @@
 import headerLogo from "../images/HeaderLogo.svg";
+import burger from "../images/burger.svg"
 
 function Header({ userMail }) {
 
@@ -8,6 +9,7 @@ function Header({ userMail }) {
     return (
         <header className="header">
             <img className="header__logo" src={headerLogo} alt="Место"/>
+            <button className="opacity burger-button"><img className="burger-button__vector" alt="" src={burger}/></button>
             <div className="header__container">
             {register ? (
                <>

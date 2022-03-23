@@ -1,0 +1,17 @@
+.form__title_info-tip {
+    text-align: center;
+    margin: 0 0 26px;
+}
+
+
+@media screen and (max-width: 970px){
+    .form__title_info-tip{
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #000;
+        margin: 0 0 14px;
+    }
+}

@@ -9,6 +9,7 @@ import ImagePopup from "./ImagePopup";
 import Footer from "./Footer";
 import api from "../utils/api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
+import InfoTooltip from "./InfoTooltip";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     const [isEditProfileOpen, setIsEditProfileOpen] = useState(false);
     const [isAddPlaceOpen, setAddPlaceIsOpen] = useState(false);
     const [isImageOpen, setIsImageOpen] = useState(false);
+    const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
 
     const [currentUser, setCurrentUser] = useState({});
     const [cards, setCards] = useState([]);
@@ -87,11 +89,16 @@ function App() {
         setIsImageOpen(true);
     }
 
+    function handleInfoTooltipClick() {
+        setIsInfoTooltipOpen(true);
+    }
+
     function closeAllPopups() {
         setAddPlaceIsOpen(false);
         setIsEditProfileOpen(false);
         setIsEditAvatarOpen(false);
         setIsImageOpen(false);
+        setIsInfoTooltipOpen(false);
         setSelectedCard({ name: "", link: "" });
     }
 
@@ -103,15 +110,23 @@ function App() {
                   userMail={"test@mail.uu"}
               />
 
-              <Main onEditAvatar={handleEditAvatarClick}
-                    onEditProfile={handleEditProfileClick}
-                    onAddPlace={handleAddPlaceClick}
-                    onCardClick={handleImageClick}
-                    onCardLike={handleCardLike}
-                    onCardDelete={handleDeleteCard}
-                    cards={cards}
+              <Main
+                  onEditAvatar={handleEditAvatarClick}
+                  onEditProfile={handleEditProfileClick}
+                  onAddPlace={handleAddPlaceClick}
+                  onCardClick={handleImageClick}
+                  onCardLike={handleCardLike}
+                  onCardDelete={handleDeleteCard}
+                  cards={cards}
 
               />
+
+              <InfoTooltip
+                isOpen={isInfoTooltipOpen}
+                onClose={closeAllPopups}
+                onInfoTooltip={handleInfoTooltipClick}
+              />
+
               {/*  <EditProfilePopup*/}
               {/*      isOpen={isEditProfileOpen}*/}
               {/*      onClose={closeAllPopups}*/}

@@ -21,15 +21,18 @@
 @import "./blocks/profile/__info-subtitle/profile__info-subtitle.css";
 @import "./blocks/popup/popup.css";
 @import "./blocks/popup/__container/popup__container.css";
+@import "./blocks/popup/__container/_info-tip/popup__container_info-tip.css";
 @import "./blocks/popup/__container-zoom/popup__container-zoom.css";
 @import "./blocks/popup/__figure/popup__figure.css";
 @import "./blocks/popup/__figure-img/popup__figure-img.css";
 @import "./blocks/popup/__figcaption/popup__figcaption.css";
 @import "./blocks/popup/_open/popup_open.css";
 @import "./blocks/form/form.css";
+@import "./blocks/form/__image/form__image.css";
 @import "./blocks/form/__container/form__container.css";
 @import "./blocks/form/__title/form__title.css";
 @import "./blocks/form/__title/_confirm/form__title_confirm.css";
+@import "./blocks/form/__title/__info-tip/form__title_info-tip.css";
 @import "./blocks/form/__input/form__input.css";
 @import "./blocks/form/__input/_dark-mode/form__input_dark-mode.css";
 @import "./blocks/form/__input/_type/_error/form__input_type_error.css";
@@ -38,6 +41,8 @@
 @import "./blocks/form/__submit/_confirm/form__submit_confirm.css";
 @import "./blocks/form/__input-error/form__input-error.css";
 @import "./blocks/add-button/add-button.css";
+@import "./blocks/burger-button/burger-button.css";
+@import "./blocks/burger-button/__vector/burger-button__vector.css";
 @import "./blocks/edit-button/edit-button.css";
 @import "./blocks/edit-button/__vector/edit-button__vector.css";
 @import "./blocks/exit-button/exit-button.css";
