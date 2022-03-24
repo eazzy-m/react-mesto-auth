@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { Route } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
 import EditProfilePopup from "./EditProfilePopup";
@@ -10,6 +10,8 @@ import Footer from "./Footer";
 import api from "../utils/api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 import InfoTooltip from "./InfoTooltip";
+import Login from "./Login";
+import Register from "./Register";
 
 function App() {
 
@@ -109,47 +111,57 @@ function App() {
               <Header
                   userMail={"test@mail.uu"}
               />
+                <Route exact path="/">
+                    <Register/>
+                </Route>
+                <Route path="/login">
+                    <Login/>
+                </Route>
+                <Route path="/main">
+                    <Main
+                        onEditAvatar={handleEditAvatarClick}
+                        onEditProfile={handleEditProfileClick}
+                        onAddPlace={handleAddPlaceClick}
+                        onCardClick={handleImageClick}
+                        onCardLike={handleCardLike}
+                        onCardDelete={handleDeleteCard}
+                        cards={cards}
 
-              <Main
-                  onEditAvatar={handleEditAvatarClick}
-                  onEditProfile={handleEditProfileClick}
-                  onAddPlace={handleAddPlaceClick}
-                  onCardClick={handleImageClick}
-                  onCardLike={handleCardLike}
-                  onCardDelete={handleDeleteCard}
-                  cards={cards}
+                    />
 
-              />
+                      <EditProfilePopup
+                          isOpen={isEditProfileOpen}
+                          onClose={closeAllPopups}
+                          onUpdateUserInfo={handleUpdateUserInfo}
+                      />
 
-              <InfoTooltip
-                isOpen={isInfoTooltipOpen}
-                onClose={closeAllPopups}
-                onInfoTooltip={handleInfoTooltipClick}
-              />
+                      <EditAvatarPopup
+                          isOpen={isEditAvatarOpen}
+                          onClose={closeAllPopups}
+                          onUpdateAvatar={handleUpdateAvatar}
+                      />
 
-              {/*  <EditProfilePopup*/}
-              {/*      isOpen={isEditProfileOpen}*/}
-              {/*      onClose={closeAllPopups}*/}
-              {/*      onUpdateUserInfo={handleUpdateUserInfo}*/}
-              {/*  />*/}
+                      <AddPlacePopup
+                          isOpen={isAddPlaceOpen}
+                          onClose={closeAllPopups}
+                          onAddPlace={handleAddPlace}
+                      />
 
-              {/*  <EditAvatarPopup*/}
-              {/*      isOpen={isEditAvatarOpen}*/}
-              {/*      onClose={closeAllPopups}*/}
-              {/*      onUpdateAvatar={handleUpdateAvatar}*/}
-              {/*  />*/}
+                      <ImagePopup
+                          card={selectedCard}
+                          isOpen={isImageOpen}
+                          onClose={closeAllPopups}
+                      />
 
-              {/*  <AddPlacePopup*/}
-              {/*      isOpen={isAddPlaceOpen}*/}
-              {/*      onClose={closeAllPopups}*/}
-              {/*      onAddPlace={handleAddPlace}*/}
-              {/*  />*/}
+                    <InfoTooltip
+                        isOpen={isInfoTooltipOpen}
+                        onClose={closeAllPopups}
+                        onInfoTooltip={handleInfoTooltipClick}
+                    />
 
-              {/*  <ImagePopup*/}
-              {/*      card={selectedCard}*/}
-              {/*      isOpen={isImageOpen}*/}
-              {/*      onClose={closeAllPopups}*/}
-              {/*  />*/}
+                </Route>
+
+
 
               <Footer/>
 
