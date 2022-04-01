@@ -31,15 +31,17 @@ function App() {
     const [currentUser, setCurrentUser] = useState({});
     const [cards, setCards] = useState([]);
     const [selectedCard, setSelectedCard] = useState({name: "", link: ""});
-
     const history = useHistory();
 
     useEffect(() => {
-        Promise.all([api.getUserInfoFromServer(), api.getCardsFromServer()])
-            .then(([user, cards]) => {
-                setCurrentUser(user);
-                setCards(cards)})
-            .catch(err => alert(`При загрузке данных с сервера возникла ${err}`));
+        if(setLoggedIn) {
+            Promise.all([api.getUserInfoFromServer(), api.getCardsFromServer()])
+                .then(([user, cards]) => {
+                    setCurrentUser(user);
+                    setCards(cards)})
+                .catch(err => alert(`При загрузке данных с сервера возникла ${err}`));
+        }
+
     }, []);
 
     function handleCardLike(card) {
@@ -86,12 +88,12 @@ function App() {
     function handleLogin({ email, password }) {
         return auth.authorize(email, password)
             .then(res => {
-                if (res && email) {
+                if (res.token) {
                     setLoggedIn(true);
                     history.push("/");
                 } else new Error("Не удалось войти в аккаунт");})
             .catch(err => {
-                alert(err);
+                console.log(err);
                 handleTooltipOpen();
             });
     }
@@ -112,7 +114,7 @@ function App() {
                     history.push("/sign-in");
                 } else new Error("Не удалось завершить регистрацию")})
             .catch(err => {
-                alert(`Ошибка регистрации пользователя: ${err}`);
+                console.log(err);
                 handleTooltipOpen();
             });
     }
@@ -142,7 +144,7 @@ function App() {
                     } else localStorage.removeItem("jwt");
                 })
                 .catch(err => {
-                    alert(err);
+                    console.log(err);
                     history.push("/sign-in");
                 });
         }
@@ -184,7 +186,7 @@ function App() {
     }
 
     return (
-      <>
+
           <CurrentUserContext.Provider value={currentUser}>
             <div className="page">
               <Header
@@ -260,7 +262,7 @@ function App() {
 
             </div>
           </CurrentUserContext.Provider>
-      </>
+
   );
 }
 
