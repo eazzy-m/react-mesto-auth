@@ -53,7 +53,7 @@ function Login({ onLogin, onLoginState }) {
                 />
                 <span className="form__input-error subtitle-input-error"/>
                 <button className="opacity auth__submit" type="submit">Войти</button>
-                <h3 className="auth__subtitle">Ещё не зарегистрированы? <Link className="opacity auth__subtitle" to="/sign-up">Войти</Link></h3>
+                <h3 className="auth__subtitle">Ещё не зарегистрированы? <Link className="opacity auth__subtitle" to="/sign-up">Зарегистрироваться</Link></h3>
             </form>
         </section>
     )
