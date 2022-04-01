@@ -109,7 +109,6 @@ function App() {
             .then(res => {
                 if (res) {
                     handleSuccessToolTip();
-                    setTimeout(handleTooltipOpen, 500);
                     history.push("/sign-in");
                 } else new Error("Не удалось завершить регистрацию")})
             .catch(err => {

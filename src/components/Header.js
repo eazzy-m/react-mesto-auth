@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import headerLogo from "../images/HeaderLogo.svg";
-import burger from "../images/burger.svg"
+import burger from "../images/burger.svg";
 
-function Header({ loggedIn, onSignOut, userData, loginState  }) {
+function Header({ loggedIn, onSignOut, userData, loginState }) {
 
     const userMail = userData ? userData.email : "";
 
