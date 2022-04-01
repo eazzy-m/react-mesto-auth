@@ -1,4 +1,4 @@
-import React from "react";
+
 import failure from "../images/failure.svg";
 import ok from "../images/success.svg";
 
