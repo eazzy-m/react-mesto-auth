@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { Route, Switch, Redirect, useHistory, HashRouter } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
 import EditProfilePopup from "./EditProfilePopup";
@@ -186,7 +186,7 @@ function App() {
     }
 
     return (
-
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <CurrentUserContext.Provider value={currentUser}>
             <div className="page">
               <Header
@@ -262,7 +262,7 @@ function App() {
 
             </div>
           </CurrentUserContext.Provider>
-
+        </HashRouter>
   );
 }
 
